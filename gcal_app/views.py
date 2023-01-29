@@ -5,14 +5,14 @@ from rest_framework.response import Response
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
-from os.path import isfile
+import os
 # This variable specifies the name of a file that contains the OAuth 2.0
 # information for this application, including its client_id and client_secret.
 # the file should be avaiable at base directory (IE: Working Directory)
 CLIENT_SECRETS_FILE = "credentials.json"
 RED_URL =  'http://127.0.0.1:8000/rest/v1/calendar/redirect'
 
-if not isfile(CLIENT_SECRETS_FILE):
+if os.name=='posix':
     CLIENT_SECRETS_FILE = "/etc/secrets/credentials.json"
     RED_URL =  'https://gcal-event-basic.onrender.com/rest/v1/calendar/redirect'
 
