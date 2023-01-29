@@ -5,12 +5,14 @@ from rest_framework.response import Response
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
-
+from os.path import isfile
 # This variable specifies the name of a file that contains the OAuth 2.0
 # information for this application, including its client_id and client_secret.
 # the file should be avaiable at base directory (IE: Working Directory)
 CLIENT_SECRETS_FILE = "credentials.json"
 
+if not isfile(CLIENT_SECRETS_FILE):
+    CLIENT_SECRETS_FILE = "/etc/secrets/credentials.json"
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection and REDIRECT URL.
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile','openid']

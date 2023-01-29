@@ -29,3 +29,4 @@ References:
 1. [https://developers.google.com/calendar/api/quickstart/python](https://developers.google.com/calendar/api/quickstart/python)
 2. [https://developers.google.com/identity/protocols/oauth2/web-server](https://developers.google.com/identity/protocols/oauth2/web-server)
 3. [https://developers.google.com/calendar/api/v3/reference/](https://developers.google.com/calendar/api/v3/reference/)
+4. [https://developers.google.com/identity/openid-connect/openid-connect#python](https://developers.google.com/identity/openid-connect/openid-connect#python)
