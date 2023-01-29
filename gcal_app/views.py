@@ -16,6 +16,7 @@ if not isfile(CLIENT_SECRETS_FILE):
     CLIENT_SECRETS_FILE = "/etc/secrets/credentials.json"
     RED_URL =  'https://gcal-event-basic.onrender.com/rest/v1/calendar/redirect'
 
+print(RED_URL)
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection and REDIRECT URL.
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile','openid']
